@@ -1,0 +1,7 @@
+module.exports = {
+    LOGIN_LOADING: "LOGIN_LOADING",
+    LOGIN_USER: "LOGIN_USER",
+    LOGIN_ERROR: "LOGIN_ERROR", 
+    LOGEDIN_USER: "LOGEDIN_USER"
+
+}
