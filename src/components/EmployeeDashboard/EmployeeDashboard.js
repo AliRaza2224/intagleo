@@ -8,7 +8,8 @@ import Box from '@mui/material/Box';
 
 
 function EmployeeDashboard() {
-  const currentUser = useSelector((state) => state.auth.user);
+  const currentUser = useSelector((state) => state.auth.userLogin);
+  console.log("current user-->>", currentUser)
   const dispatch = useDispatch();
   const handleSubmit = () => {
     dispatch(types.saveUser(null))

@@ -33,11 +33,7 @@ const theme = createTheme({
 export default function ForgotPassword() {
     const [showPassword, setShowPassword] = React.useState(false);
 
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.preventDefault();
-    };
+    
 
     const handleSubmit = (event) => {
         event.preventDefault();

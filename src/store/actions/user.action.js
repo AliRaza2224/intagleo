@@ -45,12 +45,9 @@ export const saveToken = (userToken) => {
 
 
 export const userLogin = (user) => async (dispatch) => {
-    console.log("user api ----------------->", user)
     dispatch(loadingState(true))
     await axios.post(`${BASE_URL}/api/signin`, user).then(function (res) {
         toast.success("Login Success")
-        console.log("URL Console--->>", BASE_URL)
-        console.log(res)
         dispatch(loadingState(false))
         dispatch(saveUser(res.data.user))
         dispatch(saveToken(res.data.token))

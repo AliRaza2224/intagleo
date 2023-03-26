@@ -14,7 +14,6 @@ import EmployeeDashboards from './pages/dashBoard/EmployeeDashboards';
 function App() {
 
   const saveToken = useSelector((state) => state.auth.userToken);
-  console.log("Auth Token---->>", saveToken)
 
   return (
     <div className="App">

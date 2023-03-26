@@ -9,7 +9,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk"
 import promise from "redux-promise-middleware"
-import AuthReducer from "./reducers/user.action";
+import AuthReducer from "./reducers/user.reducers";
 
 
 const routeReducers = combineReducers({
