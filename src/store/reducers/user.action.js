@@ -4,7 +4,8 @@ const initialState = {
     userLogin: null,
     isLoading: false,
     isLogedin: false,
-    error: null
+    error: null,
+    userToken: null,
 }
 
 const AuthReducer = (state = initialState, action) => {
@@ -32,6 +33,12 @@ const AuthReducer = (state = initialState, action) => {
             return {
                 ...state,
                 userLogin: action.payload,
+            };
+        }
+        case types.USER_TOKEN: {
+            return {
+                ...state,
+                userToken: action.payload,
             };
         }
 

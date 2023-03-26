@@ -1,6 +1,5 @@
 import React from 'react';
-import LoginCover from "./LoginCover";
-import LoginForm from "./LoginForm"
+import LoginCover from "../../../components/user/login/LoginCover";
 
 function LogIn() {
   return (
