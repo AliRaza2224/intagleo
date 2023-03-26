@@ -154,7 +154,7 @@ export default function LoginCover() {
                   </Button>
                   <Grid container spacing={2} >
                     <Grid item xs={4} textAlign="left">
-                      <Link to="/forget-password" variant="body2" >
+                      <Link to="/forgot-password" variant="body2" >
                         Forget Password?
                       </Link>
                     </Grid>

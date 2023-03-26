@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 import EmployeeDashboards from './pages/dashBoard/EmployeeDashboards';
 function App() {
 
-  const { saveToken } = useSelector((state) => state.auth);
+  const saveToken = useSelector((state) => state.auth.userToken);
   console.log("Auth Token---->>", saveToken)
 
   return (
@@ -21,7 +21,7 @@ function App() {
       <ToastContainer />
       <Router>
         <Routes>
-          {/* {LoginUser === false ? ( */}
+          {!saveToken ? (
             <>
               <Route exact path="/log-in" element={<LogIn />} />
               <Route exact path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -37,25 +37,25 @@ function App() {
                 element={<Navigate to="/log-in" replace={true} />}
               />
             </>
-          {/* ) : ( */}
+          ) : (
             <>
-              {/* {LoginUser === true ? ( */}
+               (
                 <Route
                   exact
                   path="/log-in"
                   element={<Navigate to="/" replace={true} />}
                 />
-              {/* ) : ( */}
-                <Route exact path="/" element={<EmployeeDashboards />} />
-                
-              {/* )} */}
-                <Route
-                  exact
-                  path="/"
-                  element={<Navigate to="/" replace={true} />}
-                />
+            ) 
+              <Route exact path="/" element={<EmployeeDashboards />} />
+
+             )
+              <Route
+                exact
+                path="/"
+                element={<Navigate to="/" replace={true} />}
+              />
             </>
-          {/* )} */}
+          )}
         </Routes>
       </Router>
 

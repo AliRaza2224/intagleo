@@ -10,6 +10,7 @@ const initialState = {
 
 const AuthReducer = (state = initialState, action) => {
     console.log("state ------------------------>", state)
+    console.log("Action console---?>>>", action)
     switch (action.type) {
         case types.LOGIN_LOADING: {
             return {
